@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Item Manipulation</title>
+  <style>
+    .highlight {
+      background-color: yellow; 
+    }
+  </style>
+</head>
+<body>
+
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+
+  <script>
+    let listItems = document.querySelectorAll('#myList li');
+
+    listItems.forEach((item, index) => {
+      console.log('Item ' + (index + 1) + ': ' + item.textContent); 
+    });
+
+    listItems.forEach((item, index) => {
+      if ((index + 1) % 2 === 0) { 
+        item.classList.add('highlight'); 
+      }
+    });
+
+    console.log('Total number of list items: ' + listItems.length);
+  </script>
+
+</body>
+</html>

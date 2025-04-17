@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Evaluate Conditions</title>
+</head>
+<body>
+  <h2>Condition Evaluator</h2>
+  <button onclick="showResult()">Evaluate</button>
+  <p id="result"></p>
+
+  <script>
+    function evaluateconditions(obj1) {
+      let result = "";
+
+      if (obj1.age >= 18 || obj1.hasLicense === true) {
+        result += "Eligible to drive\n";
+      }
+      if (obj1.temperature > 30 || obj1.humidity > 70) {
+        result += "Warning: High discomfort level\n";
+      }
+      if ((obj1.role === "admin" || obj1.role === "editor") || obj1.isActive === true) {
+        result += "Access granted\n";
+      }
+
+      return result.trim(); 
+    }
+
+    const obj1 = {
+      age: 20,
+      hasLicense: true,
+      temperature: 32,
+      humidity: 60,
+      role: "admin",
+      isActive: true,
+    };
+
+    function showResult() {
+      const result = evaluateconditions(obj1);
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>

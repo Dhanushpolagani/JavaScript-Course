@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Formatter</title>
+</head>
+<body>
+  
+
+  <script>
+    function formatCurrency(amount, currencyCode) {
+      return new Intl.NumberFormat('en', {
+        style: 'currency',
+        currency: currencyCode.toUpperCase(),
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }).format(amount);
+    }
+
+    console.log(formatCurrency(1234567.89, 'inr')); // Example: EUR
+  </script>
+</body>
+</html>
