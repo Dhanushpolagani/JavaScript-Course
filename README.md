@@ -1,0 +1,113 @@
+Section 1:-
+
+Problem - 1:
+
+When we start the program, the output is:
+Console.log (Counter ()) => Output is 1
+Console.log (Counter ()) => Output 2 is
+Console.log (Counterb ()) => Output is 1
+
+Both counters, counters and counters are independent of each other. As a result of closing, each counter claims that it is our calculator variable, which is called the function every time, so it makes them independent.
+
+
+
+Problem - 2:
+
+the output of the code is
+
+Hello, undefined! => Printed after 0 seconds
+Hello, undefined! => Printed after 1 second
+Hello, undefined! => Printed after 2 seconds
+
+To work as expected, we can use "let" instead of "var" because "let" has a range of blocks. SND for each recurrence I was awarded and the value is correctly printed.
+
+
+
+Section - 2: -
+
+Part - 1:
+
+In JS, the use of jacks, variable announcements are transferred to the top of the program. 
+The scope of secrets is a function, and since the value is not yet integrated and variables declared using "var" are raised to the top and returns unhappy.
+
+When we use "let" or "const" instead of "var" in the program, the variable is still raised at the top, but cannot be used without a statement. This is called a temporary dead zone that provokes an error before the announcement when accessing the variable.
+
+
+
+Part 2:
+
+1) In JS, "to" refers to an object that calls a function. Because the function inside Settimeout is not an object, it returns to undefined.
+
+2) The variable solves the problem of "IT" in itself, because it will never change and the user refers to an object.
+
+3) In the arrow functions, the "of this" value is inherited from where they define. So here, in Gumdelayed (), this.Name the user refers to the object correctly.
+    
+4) Using arrows
+Const Userdelayed = {
+    Name: "Dhanush",
+    Greeting: Function () {
+        Settimeout (() => { 
+        Console.log (The Highlird of Nightcourt is: $ {this.name}!);
+        }, 4000);
+    }
+    };
+
+    userdelayed.greetuser (); 
+
+
+Part - 3:
+
+1) Yes, counters and counters are independent and separate variables. Every time a new number variable is made for closure when it is called Sectuase (). 
+
+2)) 
+    FUNCTION CREATEGRATEING (greeting) {
+        Return function (name) {
+            Return $ {greeting}, $ {name}!;
+        };
+    }
+    Const Sayhello = Createregreeting ("Hello");
+    Console.log (Sayllo ("World"));
+
+3) 4) 
+    CREATESECRETHOLDER (Secret) function {
+        return {
+            Getsecret: Function () {
+                the return of mystery;
+            },
+            Setsecret: Function (Secrecret) {
+                Secret = therecrecret;
+            }
+        };
+    }
+    Const Holder = Createsecretholder ("Mysecret");
+    Console.log (Holder.getsecret ()); 
+    Holder.setsecret ("Prosececret");
+    Console.log (Holder.getsecret ()); 
+
+
+
+Part - 4:
+
+1) In JS, the remaining parameter allows you to accept an indefinite number. Argument as a field. Therefore, if you don't know exactly. The arguments can be used by the rest parameter. If parameters are smaller than arguments, undefined are returned to missing people.
+
+2) Function Function_Name (A, B, C, ... Rest) {
+    Console.log ("value and is:", a);
+    Console.log ("Rest is:", rest);
+,
+FUNCTION_NAME (5, 10, 15);
+
+3) Sumall function (... ANY) {
+        Return any.reduc ((sum, n) => sum + n, 0);
+    }
+    Console.log (Sumall (12, 34, 15)); 
+    Console.log (sumall ()); 
+    
+
+4) 
+   functional processorguments (primary function, ... rest) {
+        Return of the primary function (... rest);
+    }
+    function multiply (a, b) {
+        return a * b;
+    }
+    Console.log (processarguments (Multiply, 123, 445));
