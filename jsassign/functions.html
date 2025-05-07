@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        function createCalculator(){
+            return {
+                add: function(a, b) {
+                    return a + b;
+                },
+                subtract: function(a, b) {
+                    return a - b;
+                },
+                multiply: function(a, b) {
+                    return a * b;
+                },
+                divide: function(a, b) {
+                    return a / b;
+                }
+            }
+        }
+        let cal=createCalculator();
+        console.log(cal.add(5, 3));
+        console.log(cal.subtract(5, 3));
+        console.log(cal.multiply(5, 3));
+        console.log(cal.divide(5, 3));
+    </script>
+</body>
+</html>
