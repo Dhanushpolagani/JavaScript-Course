@@ -7,8 +7,12 @@ import { deliveryOptions } from '../data/deliveryOptions.js';
 
 hello();
 
-let cartSummaryHTML = '';
 const today = dayjs(); // only declare once
+
+
+function renderOrderSummary(){
+    
+  let cartSummaryHTML = '';
 
 cart.forEach((cartItem) => {
   const productId = cartItem.productId;
@@ -32,7 +36,7 @@ cart.forEach((cartItem) => {
   });
 const deliveryDate = today
       .add(deliveryOption.deliveryDays, 'days')
-      .format('dddd, MMMM D');
+      .format('dddd, MMMM D'); 
   // Add HTML for this cart item
   cartSummaryHTML += `
     <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
@@ -78,6 +82,8 @@ function deliveryOptionsHTML(matchingProduct, cartItem) {
   let html = '';
   const today = dayjs();
 
+
+  
   deliveryOptions.forEach((deliveryOption) => {
     const deliveryDate = today
       .add(deliveryOption.deliveryDays, 'days')
@@ -126,5 +132,8 @@ document.querySelectorAll('.js-delivery-option')
     element.addEventListener('click',() =>{
       const {productId,deliveryOptionId} = element.dataset;
       updateDeliveryOption(productId,deliveryOptionId);
+      renderOrderSummary();
     });
   });
+}
+renderOrderSummary();
