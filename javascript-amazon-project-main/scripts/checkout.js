@@ -1,5 +1,6 @@
 import {cart} from'../data/cart.js';
 import {products} from '../data/products.js';
+import { formatCurrrency } from './utils/money.js';
 
 let cartSummaryHTML = '';
 
@@ -23,14 +24,15 @@ cartSummaryHTML +=
 
             <div class="cart-item-details-grid">
               <img class="product-image"
-                src="${matchingProduct.image}">
+                src="${matchingProduct.image}"
+
 
               <div class="cart-item-details">
                 <div class="product-name">
                   ${matchingProduct.name}
                 </div>
                 <div class="product-price">
-                  $${matchingProduct.priceCents/100}
+                  $${formatCurrrency(matchingProduct.priceCents)}
                 </div>
                 <div class="product-quantity">
                   <span>
