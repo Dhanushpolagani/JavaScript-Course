@@ -1,4 +1,8 @@
-export let cart = [{
+export let cart = JSON.parse(localStorage.getItem('cart'));
+
+if(!cart){
+    cart = 
+[{
     productId:'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
     quantity: 2,
    // image:'images/products/athletic-cotton-socks-6-pairs.jpg'
@@ -8,7 +12,11 @@ export let cart = [{
    // image:'images/products/intermediate-composite-basketball.jpg'
 }];
  
+}
 
+function saveStorage(){
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
 
 
  export function addToCart(productId){
@@ -28,7 +36,7 @@ export let cart = [{
             quantity: 1 
         });
     }
-
+saveStorage();
  }
  export function removeFromCart(productId){
     const newcart=[];
@@ -38,4 +46,5 @@ export let cart = [{
         }
     });
     cart = newcart;
+    saveStorage();
  }
