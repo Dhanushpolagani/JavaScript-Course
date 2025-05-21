@@ -9,7 +9,7 @@ let ShippingPriceCents=0;
     const product = getProduct(cartItem.productId);
     productPriceCents += product.priceCents * cartItem.quantity;
 
-    const deliveryOption = getDeliveryOption(cartItem.getDeliveryOptionId);
+    const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId);
     ShippingPriceCents += deliveryOption.priceCents;
   });
 
