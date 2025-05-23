@@ -71,6 +71,32 @@ const product1 = new Product({
   },);
 product1.id='';
 //console.log(product1);
+/*
+const date = new Date();
+console.log(date);
+console.log(date.toLocaleTimeString());
+
+
+
+const object2 ={
+  a:2,
+  b:this.a
+};
+console.log(this);
+
+function logcall(){
+  console.log(this);
+}
+logcall();
+logcall.call('hello');
+this
+const ob3 = {
+  method: () =>{
+    console.log(this);
+  }
+};
+ob3.method();
+*/
 
 export const products = [
   {
