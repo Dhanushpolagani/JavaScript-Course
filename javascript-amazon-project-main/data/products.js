@@ -7,7 +7,7 @@ class Product{
   name;
   rating;
   priceCents; 
-
+ 
   constructor(productDetails){
     this.id = productDetails.id;
     this.image = productDetails.image;
@@ -111,7 +111,9 @@ export function loadProductsFetch(){
       });
 
       console.log('load products');
-    });
+    })  /*.catch(() =>{
+      console.log('unexpected error.. try again later after some time');
+    });*/
 
   return promise; // Corrected line
 }
@@ -134,12 +136,14 @@ products = JSON.parse(xhr.response).map((productDetails) => {
  
 console.log('load products');
 fun();
+}); 
+xhr.addEventListener('error',() =>{
+  console.log('Unexpected error...please try again later');
 });
 
   xhr.open('GET','https://supersimplebackend.dev/products');
   xhr.send();
 }
-loadProducts();
 
 /*
 export const products = [
